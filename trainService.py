@@ -205,7 +205,7 @@ def traindata():
     with open("cleaned_02 Harry Potter and the Chamber of Secrets.txt", 'r',
               encoding='utf-8-sig') as file:  # 선택: -sig를 붙여서 BOM 제거
         txt = file.read()
-        txt = txt[:3000]
+        txt = txt[:3000] # 시간 및 사양 목적상 훈련 텍스트를 일부만 사용함.
 
     dataset = MyDataset(txt, max_length=32, stride=4)
 
